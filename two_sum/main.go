@@ -9,7 +9,44 @@
 链接：https://leetcode-cn.com/problems/two-sum
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
+package main
 
-func main()  {
-	
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	str := "01234"
+	// fmt.Println([]byte(str))
+	for i := len(str); i > 0; i-- {
+		data := str[i-1]
+		// fmt.Println(string(data))
+		i, _ := strconv.Atoi(string(data))
+		fmt.Println(i)
+	}
+	// str = "01234"
+	// fmt.Println([]byte(str))
+
+	str = "01234"
+	fmt.Println("====>")
+	for i := 0; i < len(str); i++ {
+		data := str[i]
+		fmt.Println(string(data))
+		// i, _ := strconv.Atoi(string(data))
+		// fmt.Println(i)
+	}
+	fmt.Println("====>")
+	i := 0
+	for {
+
+		i = i + 1
+		if i > 10 {
+			fmt.Println(string(i))
+			break
+			fmt.Println("break")
+			return
+		}
+		fmt.Println(i)
+	}
 }
